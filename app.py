@@ -517,7 +517,7 @@ with metric_col3:
 
 # Predict button
 st.markdown("<br>", unsafe_allow_html=True)  # Add some spacing
-if st.button("🔍 Assess Credit Risk", type="primary", use_container_width=True):
+if st.button(" Assess Credit Risk", type="primary", use_container_width=True):
     with st.spinner("Assessing your credit risk..."):
         time.sleep(0.5)  # Small delay for better UX
         
@@ -599,7 +599,7 @@ if st.button("🔍 Assess Credit Risk", type="primary", use_container_width=True
 # Prediction Result Section - Display below the button
 if st.session_state.prediction_made:
     st.markdown("<br>", unsafe_allow_html=True)  # Add spacing
-    st.markdown("### 🎯 Credit Risk Assessment Result")
+    st.markdown("###  Credit Risk Assessment Result")
     
     prediction = st.session_state.prediction_result
     input_data = st.session_state.input_data
@@ -607,7 +607,7 @@ if st.session_state.prediction_made:
     if prediction == 1:
             st.markdown("""
                 <div class="prediction-card approved-card">
-                    <h2 style="margin: 0; color: #155724;">✅ Credit Risk - Low</h2>
+                    <h2 style="margin: 0; color: #155724;"> Credit Risk - Low</h2>
                     <p style="margin: 1rem 0 0 0; font-size: 1.1rem;">Your credit profile indicates low risk. Your application shows favorable credit characteristics.</p>
                 </div>
             """, unsafe_allow_html=True)
@@ -618,7 +618,7 @@ if st.session_state.prediction_made:
     else:
             st.markdown("""
                 <div class="prediction-card rejected-card">
-                    <h2 style="margin: 0; color: #721c24;">⚠️ Credit Risk - High</h2>
+                    <h2 style="margin: 0; color: #721c24;">Credit Risk - High</h2>
                     <p style="margin: 1rem 0 0 0; font-size: 1.1rem;">Your credit profile indicates high risk. Consider improving your credit factors.</p>
                 </div>
             """, unsafe_allow_html=True)
